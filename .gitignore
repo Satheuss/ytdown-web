@@ -1,0 +1,17 @@
+# Build files
+build/
+dist/
+*.spec
+__pycache__/
+*.pyc
+
+# Claude/Code config
+.claude/
+.ytdownweb/
+
+# Misc
+claude.py
+run.py
+
+# Source folder (we keep app.py in root)
+ytdown_folder/

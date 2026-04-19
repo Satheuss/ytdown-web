@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YTDown - Download de Vídeos YouTube</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Georgia&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="#93032E">
+                    <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                </svg>
+                <span class="logo-text">YTDown</span>
+            </div>
+            <nav class="nav">
+                <a href="#features">Funcionalidades</a>
+                <a href="#how-it-works">Como Usar</a>
+                <a href="#download" class="nav-cta">Download</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bar"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Baixe Vídeos do YouTube<br><span class="highlight">Offline & Sem Anúncios</span></h1>
+                <p class="hero-subtitle">
+                    Ferramenta desenvolvida sem fins lucrativos por estudantes, para estudantes.<br>
+                    Acesse conteúdo educacional mesmo sem internet.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#download" class="btn-primary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="7 10 12 15 17 10"/>
+                            <line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                        Baixar para Windows
+                    </a>
+                    <a href="https://github.com/Satheuss/ytdown" target="_blank" class="btn-secondary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        Ver Código Fonte
+                    </a>
+                </div>
+                <p class="version">Versão 1.0.0 | Windows 10/11 | Python 3.11+</p>
+            </div>
+            <div class="hero-image">
+                <div class="app-mockup">
+                    <div class="mockup-header">
+                        <span class="mockup-dot"></span>
+                        <span class="mockup-dot"></span>
+                        <span class="mockup-dot"></span>
+                    </div>
+                    <div class="mockup-content">
+                        <div class="mockup-title">YTDown</div>
+                        <div class="mockup-subtitle">youtube video downloader</div>
+                        <div class="mockup-input">
+                            <span class="mockup-label">LINK DO VIDEO</span>
+                            <div class="mockup-field">youtube.com/watch?v=...</div>
+                        </div>
+                        <div class="mockup-qualities">
+                            <span class="mockup-radio active">Melhor Qualidade</span>
+                            <span class="mockup-radio">1080p</span>
+                            <span class="mockup-radio">MP3</span>
+                        </div>
+                        <div class="mockup-button">BAIXAR VIDEO</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission">
+        <div class="container">
+            <div class="mission-content">
+                <h2>Por Estudantes, Para Estudantes</h2>
+                <p>
+                    Vivemos em uma realidade onde o acesso à internet não é garantido para todos.
+                    O YTDown nasceu da necessidade real de estudantes que precisam acessar conteúdo
+                    educacional offline — seja por limitações de dados móveis, instabilidade de conexão
+                    ou simplesmente para estudar em qualquer lugar.
+                </p>
+                <div class="mission-stats">
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Gratuito</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">0</span>
+                        <span class="stat-label">Anúncios</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">Open</span>
+                        <span class="stat-label">Source</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">O que você pode fazer</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21"/>
+                            <line x1="12" y1="17" x2="12" y2="21"/>
+                        </svg>
+                    </div>
+                    <h3>Vídeo em HD</h3>
+                    <p>Baixe em até 1080p ou melhor qualidade disponível. Assista offline sem buffering.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 18V5l12-2v13"/>
+                            <circle cx="6" cy="18" r="3"/>
+                            <circle cx="18" cy="16" r="3"/>
+                        </svg>
+                    </div>
+                    <h3>Apenas Áudio</h3>
+                    <p>Extraia MP3 em alta qualidade (192kbps). Perfeito para podcasts e músicas.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <h3>Rápido</h3>
+                    <p>Download otimizado com yt-dlp. Barra de progresso em tempo real.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h3>Sem Malware</h3>
+                    <p>Código aberto e auditável. Sem pop-ups, sem trackers, sem vírus.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Como Usar</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Copie o Link</h3>
+                    <p>Vá ao YouTube e copie o URL do vídeo ou playlist que deseja baixar.</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Cole no App</h3>
+                    <p>Abra o YTDown, cole o link e escolha a qualidade desejada (vídeo ou MP3).</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Pronto!</h3>
+                    <p>O arquivo será salvo na pasta Downloads. Assista offline quando quiser.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download">
+        <div class="download-bar"></div>
+        <div class="container">
+            <h2>Download</h2>
+            <p class="download-subtitle">Escolha sua versão e comece a usar</p>
+
+            <div class="download-options">
+                <div class="download-card">
+                    <div class="download-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21"/>
+                            <line x1="12" y1="17" x2="12" y2="21"/>
+                        </svg>
+                    </div>
+                    <h3>Windows</h3>
+                    <p>Executável .exe<br>Windows 10/11</p>
+                    <a href="ytdown.exe" class="btn-primary" download>
+                        Baixar .exe
+                    </a>
+                    <span class="download-size">~15 MB</span>
+                </div>
+
+                <div class="download-card">
+                    <div class="download-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polyline points="16 18 22 12 16 6"/>
+                            <polyline points="8 6 2 12 8 18"/>
+                        </svg>
+                    </div>
+                    <h3>Código Fonte</h3>
+                    <p>Python 3.11+<br>Multiplataforma</p>
+                    <a href="https://github.com/Satheuss/ytdown" target="_blank" class="btn-secondary">
+                        Ver no GitHub
+                    </a>
+                    <span class="download-size">Open Source</span>
+                </div>
+            </div>
+
+            <div class="requirements">
+                <h4>Requisitos:</h4>
+                <ul>
+                    <li>Windows 10 ou 11 (64-bit)</li>
+                    <li>Python 3.11+ (para versão código fonte)</li>
+                    <li>Conexão com internet (apenas durante o download)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Perguntas Frequentes</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        O YTDown é seguro?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim. O código é 100% aberto e pode ser auditado por qualquer pessoa no GitHub.
+                        Não coletamos dados pessoais e o app não se conecta a servidores externos além do YouTube.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Posso baixar playlists inteiras?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim! O YTDown suporta URLs de playlists. Todos os vídeos serão baixados
+                        automaticamente na qualidade escolhida.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Por que criou isso?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Como estudantes, sabemos que muitas vezes não temos acesso à internet
+                        estável ou dados móveis suficientes. Baixar conteúdo educacional permite
+                        estudar no ônibus, em locais sem WiFi, ou economizar dados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal Notice -->
+    <section class="legal">
+        <div class="container">
+            <div class="legal-content">
+                <h3>Aviso Legal</h3>
+                <p>
+                    O YTDown é uma ferramenta educacional. Ao utilizá-la, você concorda em respeitar
+                    as leis de direitos autorais do seu país. Baixe apenas conteúdo que você tem
+                    permissão para acessar offline (seus próprios vídeos, vídeos com licença Creative Commons,
+                    ou conteúdo de domínio público).
+                </p>
+                <p>
+                    Não nos responsabilizamos pelo uso indevido da ferramenta. O YouTube™ é marca
+                    registrada do Google LLC. Não somos afiliados ao YouTube ou Google.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">YTDown</span>
+                    <span class="footer-by">by Satheuss</span>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/Satheuss/ytdown" target="_blank">GitHub</a>
+                    <a href="https://github.com/Satheuss/ytdown/issues" target="_blank">Reportar Bug</a>
+                </div>
+                <p class="footer-copy">© 2026 YTDown. Open Source sob MIT License.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
