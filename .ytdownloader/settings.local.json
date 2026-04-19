@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install *)",
+      "Bash(pyinstaller *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(./ytdown.exe)",
+      "Bash(sleep 3 curl -s http://localhost:5000/api/health taskkill //IM ytdown.exe //F)",
+      "Bash(curl -s http://localhost:5000/api/health)",
+      "Bash(taskkill //IM ytdown.exe //F)",
+      "Bash(git config *)",
+      "Bash(git checkout *)",
+      "Bash(git branch *)",
+      "Bash(git rm *)"
+    ]
+  }
+}
