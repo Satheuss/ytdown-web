@@ -35,11 +35,12 @@ def _pip_install(*packages):
 
 
 def ensure_dependencies():
-    """Instala yt-dlp e imageio[ffmpeg] se necessario."""
     if importlib.util.find_spec("yt_dlp") is None:
         _pip_install("yt-dlp")
     if importlib.util.find_spec("imageio_ffmpeg") is None:
         _pip_install("imageio[ffmpeg]")
+    if importlib.util.find_spec("requests") is None:
+        _pip_install("requests")
 
 
 def get_ffmpeg_path() -> str:
@@ -260,6 +261,19 @@ class App(tk.Tk):
         if self._status_label:
             self._status_label.config(fg=color)
 
+    def _buscar_frase(self):
+        import requests
+        try:
+
+            resposta = requests.get("https://api.adviceslip.com/advice", timeout=5)
+            if resposta.status_code == 200:
+                dados = resposta.json()
+            return dados['slip']['advice']
+        except Exception as e:
+            print(f"Erro na API: {e}")
+
+        return "Respire fundo, o download já vai começar!"
+
     def _start_download(self):
         url = self.url_var.get().strip()
         if not url:
@@ -279,6 +293,7 @@ class App(tk.Tk):
 
     def _download_worker(self, url: str):
         try:
+            self.frase_atual = self._buscar_frase()
             # FFmpeg
             ensure_dependencies()
             ffmpeg_path = get_ffmpeg_path()
@@ -302,12 +317,9 @@ class App(tk.Tk):
                     "no_warnings": True,
                 }
             else:
-                # Para vídeo: usar formato que já inclui áudio ou forçar merge
                 if quality == "best":
-                    # best* tenta formatos pré-mesclados primeiro, depois separados
                     fmt = "best*[vcodec!=none][acodec!=none]/bestvideo*+bestaudio/best"
                 else:
-                    # Para qualidade específica, tentar formato mesclado primeiro
                     fmt = (f"best[height<={quality}][vcodec!=none][acodec!=none]/"
                            f"bestvideo[height<={quality}]+bestaudio/best")
 
@@ -320,7 +332,6 @@ class App(tk.Tk):
                     "merge_output_format": "mp4",
                     "quiet": True,
                     "no_warnings": True,
-                    # Garantir que FFmpeg seja usado para merge quando necessário
                     "postprocessor_args": {
                         "merger+ffmpeg": ["-c", "copy", "-movflags", "+faststart"],
                     },
@@ -341,7 +352,7 @@ class App(tk.Tk):
             speed = d.get("_speed_str", "").strip()
             eta = d.get("_eta_str", "").strip()
             self.after(0, self._set_status,
-                       f"{pct}  |  {speed}  |  ETA {eta}", MUTED)
+                       f"{pct}  |  {speed}  |  ETA {eta}\n💡 Dica: {getattr(self, 'frase_atual', '')}", MUTED)
 
     def _on_success(self, title: str):
         self._reset_btn()
