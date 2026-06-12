@@ -1,9 +1,3 @@
-Bloco 2 — o arquivo novo feedback-form.js (versão final, ajustei pra usar o botão em vez de <form>, que é mais seguro em sites estáticos):
-javascript// ============================================================
-// Formulário de avaliação — grava feedbacks no Supabase (INSERT)
-// Issue #5 — autor: Fernando
-// ============================================================
-
 document.addEventListener('DOMContentLoaded', () => {
     const botao = document.getElementById('fb-enviar');
     const statusMsg = document.getElementById('feedback-status');
