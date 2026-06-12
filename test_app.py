@@ -1,6 +1,6 @@
 # pip install pytest
 import pytest
-from app import is_valid_youtube_url
+from core import is_valid_youtube_url
 
 # Teste 1
 
