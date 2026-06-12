@@ -276,6 +276,43 @@
         </div>
     </section>
 
+<!-- Avaliações dos Usuários -->
+    <section id="avaliacoes" class="faq">
+        <div class="container">
+            <h2 class="section-title">Avaliações dos Usuários</h2>
+
+            <div class="feedback-form-wrapper" style="max-width:600px;margin:0 auto 40px;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:30px;">
+                <div id="feedback-form">
+                    <div style="margin-bottom:16px;">
+                        <label for="fb-nome" style="display:block;margin-bottom:6px;color:var(--text-muted);">Seu nome</label>
+                        <input type="text" id="fb-nome" maxlength="60" style="width:100%;padding:12px;background:var(--bg);border:1px solid var(--border);border-radius:8px;color:var(--text);" />
+                    </div>
+                    <div style="margin-bottom:16px;">
+                        <label for="fb-nota" style="display:block;margin-bottom:6px;color:var(--text-muted);">Nota</label>
+                        <select id="fb-nota" style="width:100%;padding:12px;background:var(--bg);border:1px solid var(--border);border-radius:8px;color:var(--text);">
+                            <option value="">Escolha...</option>
+                            <option value="5">★★★★★ (5)</option>
+                            <option value="4">★★★★ (4)</option>
+                            <option value="3">★★★ (3)</option>
+                            <option value="2">★★ (2)</option>
+                            <option value="1">★ (1)</option>
+                        </select>
+                    </div>
+                    <div style="margin-bottom:16px;">
+                        <label for="fb-comentario" style="display:block;margin-bottom:6px;color:var(--text-muted);">Comentário (opcional)</label>
+                        <textarea id="fb-comentario" rows="3" maxlength="300" style="width:100%;padding:12px;background:var(--bg);border:1px solid var(--border);border-radius:8px;color:var(--text);resize:vertical;"></textarea>
+                    </div>
+                    <button type="button" id="fb-enviar" class="btn-primary" style="width:100%;">Enviar Avaliação</button>
+                    <p id="feedback-status" style="margin-top:12px;text-align:center;min-height:20px;"></p>
+                </div>
+            </div>
+
+            <!-- A listagem de avaliações (Diogo / Issue #6) será inserida aqui -->
+            <div id="feedback-list" style="max-width:600px;margin:0 auto;"></div>
+
+        </div>
+    </section>
+    
     <!-- Legal Notice -->
     <section class="legal">
         <div class="container">
@@ -315,6 +352,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="supabase.js"></script>
 
+<script src="feedback-form.js"></script>
+    
     <script src="app.js"></script>
 </body>
 </html>
